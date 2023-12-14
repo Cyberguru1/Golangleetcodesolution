@@ -15,7 +15,6 @@ func maxProduct(nums []int) int {
 	return result
 }
 
-
 // Second bruteforce solution (6ms):
 
 func maxProduct(nums []int) int {

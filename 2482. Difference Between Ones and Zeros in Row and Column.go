@@ -1,40 +1,42 @@
-// First bruteforce solution (7ms)
 
-func numSpecial(mat [][]int) int {
-	result := 0
-	lrow := len(mat)
-	lcol := len(mat[0])
+// third solution, space O(n) time O(N^2)
+// runtime 187ms
 
-   var col_arr []int
-   var row_arr []int
+func onesMinusZeros(grid [][]int) [][]int {
+	n_rows := len(grid)
+	n_cols := len(grid[0])
 
-	for i:=0; i < lrow; i++ {
-		rsum := 0
-		for j:= 0; j < lcol; j++ {
-			rsum += mat[i][j]
-		}
-		col_arr = append(col_arr, rsum)
-	}
+	sumRows := make([]int, n_rows)
+	sumCols := make([]int, n_cols)
 
-	for i:=0; i < lcol; i++ {
-		csum := 0
-		for j:= 0; j < lrow; j++ {
-			csum += mat[j][i]
-		}
-		row_arr = append(row_arr, csum)
-	}
+	for i := 0; i < n_rows; i++ {
+		for j := 0; j < n_cols; j++ {
 
-
-	for i,v := range mat {
-		if (col_arr[i] != 1){
-			continue
-		} else {
-			for j, k := range v {
-				if (k == 1) && (row_arr[j] == k) {
-					result += 1
-				}
+			if grid[i][j] == 1 {
+				sumRows[i]++
+			} else {
+				sumRows[i]--
 			}
 		}
 	}
-	return result
+
+	for i := 0; i < n_cols; i++ {
+		for j := 0; j < n_rows; j++ {
+			if grid[j][i] == 1 {
+				sumCols[i]++
+			} else {
+				sumCols[i]--
+			}
+		}
+	}
+
+	for i, k := range grid {
+		d := sumRows[i]
+		for j, _ := range k {
+			k[j] = d + sumCols[j]
+		}
+	}
+
+	return grid
 }
+

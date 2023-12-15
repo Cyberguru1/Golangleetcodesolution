@@ -1,6 +1,7 @@
 // third solution time: (O(n)), space (O(n)); runtime: 0ms
 type void struct{}
 var member void
+
 func destCity(paths [][]string) string {
 	lpaths := len(paths)
 	arr := make(map[string]void, lpaths)
@@ -16,5 +17,4 @@ func destCity(paths [][]string) string {
 	}
 
 	return "None"
-
 }

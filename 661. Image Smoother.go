@@ -56,3 +56,39 @@ func imageSmoother(img [][]int) [][]int {
 	}
 	return new_mat
 }
+
+// Second solution same runtime as above
+// but more Elegantooooo.....\_(◕‿◕)_/
+
+func imageSmoother(img [][]int) [][]int {
+	lr, lc := len(img), len(img[0])
+
+	new_mat := make([][]int, lr)
+
+	for i, v := range img {
+		new_mat[i] = make([]int, lc)
+		for j, _ := range v {
+			new_mat[i][j] = smooth(img, i, j)
+		}
+
+	}
+	return new_mat
+}
+
+func smooth(img [][]int, x, y int) int {
+	lr := len(img)
+	lc := len(img[0])
+	sum := 0
+	cnt := 0
+	for i := -1; i <= 1; i++ {
+		for j := -1; j <= 1; j++ {
+			ix := x + i
+			iy := y + j
+			if ( ix < 0 || ix >= lr || iy >= lc || iy < 0) {continue}
+			sum += img[ix][iy]
+			cnt++
+		}
+	}
+	return (sum/cnt)
+}
+

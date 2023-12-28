@@ -8,7 +8,7 @@ func getLengthOfOptimalCompression(s string, k int) int {
 		dp[i] = make([]int, k+1)
 		for j := range dp[i] {
 			dp[i][j] = 101
-		}1531. String Compression II
+		}
 
 	}
 

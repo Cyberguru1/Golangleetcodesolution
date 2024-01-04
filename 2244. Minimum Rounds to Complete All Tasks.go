@@ -1,12 +1,12 @@
 // first brute force solution
 // Time C. O(n), Space C. O(n)
 
-func minOperations(nums []int) int {
+func minimumRounds(tasks []int) int {
 
 	result := 0
 	dibs := make(map[int]int)
 
-	for _, v := range nums {
+	for _, v := range tasks {
 		dibs[v]++
 	}
 
@@ -32,13 +32,12 @@ func minOperations(nums []int) int {
 }
 
 // more better solution
-
-func minOperations(nums []int) int {
+func minimumRounds(tasks []int) int {
 
 	result := 0
 	dibs := make(map[int]int)
 
-	for _, v := range nums {
+	for _, v := range tasks {
 		dibs[v]++
 	}
 

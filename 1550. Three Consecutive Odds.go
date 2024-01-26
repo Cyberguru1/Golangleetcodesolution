@@ -17,6 +17,5 @@ func threeConsecutiveOdds(arr []int) (res bool) {
 			return
 		}
 	}
-
 	return
 }

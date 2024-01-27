@@ -10,6 +10,8 @@
  * }
  */
 
+
+
 func pseudoPalindromicPaths(root *TreeNode) int {
 
 	res, path := 0, 0

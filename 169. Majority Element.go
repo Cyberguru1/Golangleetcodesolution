@@ -1,3 +1,30 @@
+// Time C. O(n), Space C. O(n)
+// runtime 12ms
+
+func majorityElement(nums []int) int {
+
+	n := len(nums)
+
+	if n == 1 {
+		return nums[0]
+	}
+
+	mapp := map[int]int{}
+
+	for _, k := range nums {
+		mapp[k]++
+		if kk, ok := mapp[k]; ok {
+			if kk == (n/2)+1 {
+				return k
+			}
+		}
+	}
+
+	return 0
+}
+
+// Follow up using O(1) space complexity
+
 // Time C. O(nlogn), Space C. O(1)
 // runtime 11ms
 

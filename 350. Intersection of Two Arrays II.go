@@ -1,7 +1,6 @@
 // Time C O(n), Space C. O(1)
 
 func intersect(nums1 []int, nums2 []int) (res []int) {
-
 	sort.Ints(nums1)
 	sort.Ints(nums2)
 

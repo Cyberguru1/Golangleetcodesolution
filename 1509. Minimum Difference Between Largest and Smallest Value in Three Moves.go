@@ -1,7 +1,6 @@
 // Time C. O(n), Space C. O(1)
 
 func minDifference(nums []int) (res int) {
-
 	lent := len(nums)
 	if lent <= 4 { return }
 

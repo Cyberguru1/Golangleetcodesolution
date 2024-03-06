@@ -6,7 +6,7 @@ func minimumLength(s string) (res int) {
 	l, r := 0, len(s)-1
 
 	for l < r && s[l] == s[r] {
-		char = s[l]
+		char := s[l]
 		for l <= r && s[l] == char {
 			l++
 		}

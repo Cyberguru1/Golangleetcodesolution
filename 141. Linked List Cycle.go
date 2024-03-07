@@ -24,7 +24,7 @@ func hasCycle(head *ListNode) bool {
 		tort = tort.Next
 		if hare.Next == nil {
 			return false
-		}else {
+		} else {
 			hare = hare.Next.Next // two times faster than tortise
 		}
 	}

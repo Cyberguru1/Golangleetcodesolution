@@ -1,4 +1,5 @@
-// TIme C. O(M*N)
+// TIme C. O(M*N)/ Space C. O(1)
+// Best Runtime 0ms
 
 func numIslands(grid [][]byte) (count int ){
 	

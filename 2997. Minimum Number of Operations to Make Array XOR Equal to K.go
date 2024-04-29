@@ -1,5 +1,6 @@
 // Time C. O(1), Space C O(1)
 // runtime 10ms
+
 func minOperations(nums []int, k int) int {
 	res := k
 	for _, n := range nums {
@@ -12,4 +13,3 @@ func minOperations(nums []int, k int) int {
 	}
 	return ans
 }
-

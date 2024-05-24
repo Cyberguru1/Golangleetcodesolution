@@ -1,5 +1,5 @@
 // MR Beautiful
-// 
+// Time C. O(2^n), Space C. O(n)
 
 func beautifulSubsets(nums []int, k int) (count int) {
 

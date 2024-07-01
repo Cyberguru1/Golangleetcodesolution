@@ -1,4 +1,4 @@
-
+// Time C. O(n), Space C. O(1)
 
 func threeConsecutiveOdds(arr []int) (res bool) {
 
